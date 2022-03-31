@@ -1,0 +1,1 @@
+FontAwesomeShinyApp::run_app()
