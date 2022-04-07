@@ -1,28 +1,23 @@
 #' The app user interface
-#' @param request Interanl parameter for {shiny}
+#' @param request Internal parameter for {shiny}
 #' @noRd
 
 app_ui = function(request) {
-  # Define UI for app that draws a histogram ----
   shiny::fluidPage(
 
-    # App title ----
-    shiny::titlePanel("Hello Shiny!"),
+    shiny::titlePanel("Font Awesome"),
 
-    # Sidebar layout with input and output definitions ----
     shiny::sidebarLayout(
 
-      # Sidebar panel for inputs ----
       shiny::sidebarPanel(
-
+        shiny::selectInput("icon_choice", "Choose an icon:",
+                    c("User" = "\uf007",
+                      "Check" = "\uf00c",
+                      "Warning" = "\uf071"))
       ),
 
-      # Main panel for displaying outputs ----
       shiny::mainPanel(
-
-        # Output: Histogram ----
-        shiny::plotOutput(outputId = "distPlot")
-
+        shiny::plotOutput(outputId = "iconPlot")
       )
     )
   )
