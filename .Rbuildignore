@@ -1,3 +1,4 @@
 ^FontAwesomeShinyApp\.Rproj$
 ^\.Rproj\.user$
 FontAwesomeShinyAppDeploy/
+^LICENSE\.md$
